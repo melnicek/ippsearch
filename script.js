@@ -4,8 +4,7 @@ filterInput.addEventListener("keyup", filterNames);
 readTextFile("https://gist.githubusercontent.com/sminez/571bd7bafb1b88630b85c85a0cd66e3a/raw/68fe21504be4654b739a577a482d91587524f683/ippsec-details.txt");
 
 
-function readTextFile(file)
-{
+function readTextFile(file){
   let rawFile = new XMLHttpRequest();
   rawFile.open("GET", file, true);
   rawFile.onreadystatechange = function (){
@@ -33,7 +32,6 @@ function readTextFile(file)
 
             ul.appendChild(li);
           }
-          console.log(currentLink + element);
         }
       }
     }
