@@ -1,0 +1,1884 @@
+HackTheBox - Reddish
+https://www.youtube.com/watch?v=Yp4oxoQIBAM&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=2&t=0
+
+00:55  - Begin of Recon (Port Scans)
+04:09  - Reverse Image Searching an favicon to get application used
+08:20  - NODE-RED: Reverse Shell Returned
+15:30  - NODE-RED: Running IP and Port Scans to identify lateral movement targets
+24:29  - Downloading Chisel (Go Program for Tunnels).
+25:00  - Shrinking Go Programs by using ldflags and upx packing from 10Mb to 3Mb!
+27:00  - PowerPoint: Explaining Reverse Pivot Tunnel using Chisel
+31:25  - WWW: Tunnel online, examining the website
+34:23  - Full Port Scan to 172.19.0.2, discover REDIS
+36:30  - Searching for ways to execute code against REDIS
+38:07  - Using REDIS to create a PHP Shell
+41:06  - PowerPoint: Explaining Local Pivot Tunnel using Chisel
+44:30  - WWW: Reverse Shell Returned
+45:45  - Notice wildcard used with RSYNC, go search GTFOBins
+51:32  - Abusing the wildcard within RSYNC
+57:23  - WWW: Got Root, but no flag... Lets go look at RSYNC again.
+01:00:15  - Explaining how to tunnel from Backup - WWW - NODE-RED - Kali
+01:17:50  - Getting reverse shell on BACKUP via uploading CronJob through rsync
+01:20:30  - BACKUP: Reverse Shell Returned... No root.txt here either!?
+01:26:30  - BACKUP: Noticing this is has /dev/sda*, where other dockers do not
+01:28:15  - BACKUP: Dropping a cronjob on root disk to get shell on the host
+01:30:45  - ExtraContent: PowerPoint Reverse SOCKS5 Proxy with Chisel
+
+
+HackTheBox - Mischief
+https://www.youtube.com/watch?v=GKo6xoB1g4Q&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=3&t=0
+
+01:20  - Begin of NMAP
+02:30  - Extra nmaps, SNMP and AllPorts
+04:00  - Playing with OneSixtyOne (SNMP BruteForce)
+07:00  - Looking at SNMPWalk Output
+08:40  - Installing SNMP Mibs so SMPWalk is readable
+10:05  - Accessing the box over Link Local IPv6 Address
+14:00  - Looking at Por 3366 (Website), getting PW from SNMP Info
+17:50  - Getting IPv6 Routable Address via SNMP
+19:20  - NMAP the IPv6 Address
+21:00  - Accessing the page over IPv6
+23:00  - Getting output from the command execution page
+24:55  - Viewing Credentials Files and accessing the box via SSH
+29:00  - Examining why loki cannot use /bin/su (getfacl)
+31:00  - Getting a shell as www-data
+40:30  - Extra content, reading files via ICMP
+
+
+HackTheBox - Nightmarev2  - Speed Run/Unintended Solutions
+https://www.youtube.com/watch?v=TVhtjiSedjU&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=4&t=0
+
+01:10  - End of intro, Start of nmap
+02:47  - Playing with Second-Order Union Injection
+05:44  - Dumping all users
+07:15  - Converting SFTP Exploit from 64bit to 32bit
+13:27  - Reversing SLS Binary
+15:19  - Kernel Exploit
+22:31  - First Method - Executing ELF Binaries from memory (Reflective loading elf)
+35:57  - Second Method - Crashing a program to create a write-able file.
+
+
+HackTheBox - Nightmare
+https://www.youtube.com/watch?v=frh-jYaUvrU&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=5&t=0
+
+01:50  - Start of Recon
+04:58  - /documents and /secret rabbit hole enumeration
+08:13  - Using wfuzz on the /secret rabbit hole to find argument for download.php
+13:40  - Begin of Web Application Enumeration, some XSS Found
+18:23  - Throwing bad characters in username and finding Second-Order SQL Injection.
+23:50  - Begin of Union Injection to dump the database via second order sql injection
+39:36  - Dumping users and passwords from SysAdmin table and using Hydra to bruteforce SSH
+43:54  - Enumerating SFTP (Using SSHFS to Dump a File Listing)
+53:00  - Converting 64-Bit SFTP Exploit to 32-Bit
+01:11:46  - Reverse Shell Returned, some stuff and finding Set-GID Binary
+01:22:55  - Reversing SLS binary with Radare2 (r2)
+01:47:53  - Exploiting SLS Binary with new line character (Get to Decoder User)
+01:51:47  - Begin of Kernel Exploitation (CVE-2017-1000112)
+01:56:00  - Kernel Exploit Compiled (silly mistake before)
+01:59:52  - Creating a new lsb-release file so exploit can identify kernel
+02:07:03  - Recap of Box
+02:09:56  - Creating a Tamper Script to do Second-Order SQL Injection
+
+
+HackTheBox - Fulcrum
+https://www.youtube.com/watch?v=46RJxJ-Fm0Y&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=6&t=0
+
+02:08  - Begin of Recon
+14:00  - XXE Detection on Fulcrum API
+17:40  - XXE Get Files
+23:40  - XXE File Retrieval Working
+24:30  - Lets Code a Python WebServer to Aid in XXE Exploitation
+39:45  - Combining XXE + SSRF (Server Side Request Forgery) to gain Code Execution
+47:28  - Shell Returned + Go Over LinEnum
+56:49  - Finding WebUser's Password and using WinRM to pivot
+01:06:00  - Getting Shell via WinRM, finding LDAP Credentials
+01:14:00  - Using PowerView to Enumerate AD Users
+01:27:06  - Start of getting a Shell on FILE (TroubleShooting FW)
+01:35:35  - Getting shell over TCP/53 on FILE
+01:37:58  - Finding credentials on scripts in Active Directories NetLogon Share, then finding a way to execute code as the Domain Admin... Triple Hop Nightmare
+01:58:10  - Troubleshooting the error correctly and getting Domain Admin!
+02:03:54  - Begin of unintended method (Rooting the initial Linux Hop)
+02:09:54  - Root Exploit Found
+02:12:25  - Mounting the VMDK Files and accessing AD.
+
+
+HackTheBox - Ariekei
+https://www.youtube.com/watch?v=Pc4tzsn-ats&list=PLidcsTyj9JXLI9mAR4MPiL19hq5lpaYNd&index=7&t=0
+
+00:23  - Explaining VM Layout
+01:47  - Nmap Start
+05:20  - Poking at Virtual Host Routing (Beehive &amp; Calvin)
+10:25  - Fixing GoBuster to find /cgi-bin/
+11:48  - Enumerating WAF (Web Application Firewall), to see how it detects Shellshock
+15:08  - Using VirtualHostRouting to navigate to Calvin.htb.htb
+18:15  - Using ImageTragick to exploit Calvin
+25:30  - Calvin Reverse shell returned
+31:35  - Poking at /common, which allows pivot to Bastion Host
+34:20  - SSH into the Bastion Host
+38:45  - Explain SSH Local and Remote Port Forwarding
+46:00  - Beehive Reverse Shell Returned
+50:00  - Finding the root password via /common/containers/bastion-live/Dockerfile
+54:50  - PrivEsc via Docker (much like the LXC shown in Calamity)
+57:05  - Getting root access to filesystem
+58:10  - Failing to get root shell via Crontab
+01:06:20  - Yeah screw crontab, lets just create an ssh key.
+
+
+HackTheBox - Holiday
+https://www.youtube.com/watch?v=FvHyt7KrsPE&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=10&t=0
+
+00:46  - NMAP Scan and Review
+01:53  - GoBuster and identify User Agent based Routing
+04:09  - SQLMap the Login
+08:00  - Login to the page
+08:55  - Begin of XSS
+11:15  - Bypass first XSS Filter
+14:45  - Encoded JS Payload - Getting XSS to call back to us
+16:56  - Using Python to encode JS which will call back to us.
+24:25  - Executing the paylaod
+25:06  - Stage 2 XSS Attack - XMLHttpRequest
+31:30  - Troubleshooting, No code works the first time.
+36:00  - Stage 2 Fixed.
+40:57  - Initial access to /admin
+42:00  - Finding Command Injection
+43:40  - Explanation of IP "Encoding"
+48:40  - Rev Shell obtained
+49:30  - How I found out about the IP Encode Trick
+51:40  - Begin of PrivEsc
+
+
+HackTheBox - Charon
+https://www.youtube.com/watch?v=_csbKuOlmdE&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=11&t=0
+
+1:30  - Rabbit Hole - Searching for SuperCMS
+6:23  - Running enumeration in the background (GoBuster)
+7:40  - Rabbit Hole - SQLMap Blog SinglePost.php
+12:04  - Finding PHP Files in /cmsdata/ (GoBuster)
+12:53  - Manual Identification of SQL Injection
+15:50  - SQL Injection Explanation
+17:20  - Rabbit Hole - Starting SQLMap in the Background
+18:10  - SQL Union Injection Explanation
+19:30  - Identifying "Bad/Filtered Words" in SQL Injection
+21:02  - SQL Union Finding number of items returned
+21:48  - Returning data from Union Injection
+22:48  - SQL Concat Explanation
+23:55  - Enumerating SQL Databases Explanation (Information_Schema)
+25:46  - Returning Database, Table, Columns from Information_Schema
+29:30  - Scripting to dump all columns
+36:45  - Listing of columns in SuperCMS
+37:15  - Dumping User Credentials
+41:36  - Logging in and exploiting SuperCMS
+47:00  - Return of reverse shell
+48:40  - Transfering small files from shell to my machine
+50:56  - Using RsaCtfTool to decrypt contents with weak public key
+52:52  - Breaking weak RSA manually
+1:01:20  - Begin PrivEsc to Root
+1:02:40  - Transering large files with NC
+1:03:50  - Analyzing SuperShell with BinaryNinja (Paid)
+1:06:04  - Analyzing SuperShell with Radare2 (Free)
+1:08:22  - Exploiting SuperShell
+1:12:46  - Encore.  Getting a Root Shell with SetUID Binary
+
+
+HackTheBox - Joker
+https://www.youtube.com/watch?v=5wyvpJa9LdU&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=12&t=0
+
+00:27  - Port Enumeration
+02:54  - UDP Port Review
+03:40  - TFTP Enumeration
+06:30  - Cracking Squid PW
+08:00  - FoxyProxy Setup
+09:45  - Burp Setup
+14:45  - Running Commands
+21:20  - Reverse Shell
+22:30  - PrivEsc to Alekos #1
+28:00  - PrivEsc to Alekos #2
+30:37  - Root #1 (SymLink)
+30:48  - Root #2 (Tar Checkpoint)
+44:45  - Root #3 (Remove Development)
+
+
+HackTheBox - Zipper
+https://www.youtube.com/watch?v=RLvFwiDK_F8&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=2&t=0
+
+01:15  - Start of NMAP
+04:10  - Signing into Zabbix as Guest
+05:30  - Getting potential usernames from inside Zabbix and guessing creds
+06:30  - Running Searchsploit and looking for vulnerabilties
+07:20  - Analyzing the "API" Script from SearchSploit as we have API Creds
+10:15  - Modifying the "API" Script
+11:15  - Showing a shortcut to skip the Container to Host Lateral Movement.
+15:35  - Shell on the Container.
+17:25  - Searching for Zabbix MySQL Password
+18:35  - Dumping the Zabbix User Database
+20:00  - Logging into Zabbix as Admin, discover ZBX Agent on Host.  Testing if port is accessible
+23:30  - Running commands on the Zabbix Agent (Host OS) from Zabbix Server (Guest OS)
+29:53  - Getting a Reverse Shell on Zabbix (use nohup to fork)
+32:40  - Running LinEnum on Zabbix Host
+35:15  - Examining home directories to find Zapper Creds
+36:42  - Examining the "Zabbix-Service" SetUID
+39:00  - PRIVESC #1: Running ltrace to discover it is vulnerable to $PATH Manipulation
+42:00  - PRIVESC #2: Weak permissions on Purge-Backups Service
+48:30  - Extra Content: Building a Zabbix API Client from Scratch!
+48:55  - "Pseudo Terminal" Skeleton Script via Cmd module
+50:00  - Adding Login Functionality
+56:08  - Making the script login upon starting
+57:50  - Adding functionality to dump users
+01:04:00  - Adding functionality to dump groups
+01:05:25  - Adding functionality to add users
+01:10:45  - Adding functionality to modify users
+
+
+HackTheBox - Dab
+https://www.youtube.com/watch?v=JvqBaZ0WnV4&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=3&t=0
+
+00:40  - Begin of the box
+03:20  - Checking the HTTP Ports out
+04:38  - Using wfuzz to bruteforce a login on port 80
+08:15  - Begin examining port 8080, use wfuzz to bruteforce a cookie
+11:30  - Using wfuzz to enumerate the WAF and determine bad characters
+14:40  - Doing a SSRF Like attack with wfuzz and enumerating open ports on localhost.
+16:50  - Begin examining port 11211 (MemCache)
+18:00  - Dumping data from Memcache
+23:50  - Using CVE-2018-15473 to enumerate valid users over SSH
+27:35  - Cracking the users hash and logging into the box
+29:00  - Using R2 to analyzing rabbit hole application "try_harder"
+33:30  - Going through LinEnum
+38:30  - Using r2 to examine myexec to find password
+40:13  - Using r2 to examine libseclogin.so
+41:30  - Examining ld.so.conf.d to identify if we can use ldconfig to hijack a library
+42:10  - Creating a malicious library to hijack seclogin()
+45:10  - Lets bypass the login by hijacking printf()
+
+
+HackTheBox - Oz
+https://www.youtube.com/watch?v=yX00n1UmalE&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=4&t=0
+
+00:50  - Start of the box
+05:30  - Attempting GoBuster but wildcard response gives issue
+07:40  - Start of doing wfuzz to find content
+10:38  - Manually testing SQLInjection
+13:07  - Running SQLMap and telling it exactly where the injection is
+16:04  - Manually extracting files with the SQL Injection
+19:50  - Cracking the hash with hashcat
+25:00  - Start of examining the custom webapp, playing with Template Injection
+27:00  - Explaining a way to enumerate language behind a webapp
+35:17  - Reverse Shell returned on first Docker Container
+38:00  - Examining SQL Database
+39:40  - Doing the Port Knock to open up SSH
+43:50  - Gain a foothold on the host of the docker container via ssh
+46:00  - Identifying containers running
+50:10  - Creating SSH Port Forwards without exiting SSH Session then NMAP through
+55:11  - Begin looking into Portainer, finding a weak API Endpoint
+59:00  - Start of creating a container in portainer that can access the root file
+01:08:25  - Changing sudoers so dorthy can privesc to root
+01:09:50  - Lets go back and create a python script to play with SQL Injection
+
+
+HackTheBox - Falafel
+https://www.youtube.com/watch?v=CUbWpteTfio&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=5&t=0
+
+01:15  - Begin of Recon
+04:25  - Bruteforcing valid users
+11:15  - Manually finding SQL Injection
+13:13  - Using --string with SQLMap to aid Boolean Detection
+15:41  - PHP Type Confusion ( == vs === with 0e12345) [Type Juggling]
+18:35  - Attempting Wget Exploit with FTP Redirection (failed)
+26:39  - Exploiting wget's maximum file length
+33:30  - Reverse Shell Returned
+36:19  - Linux Priv Checking Enum
+41:00  - Checking web crap for passwords
+44:00  - Grabbing the screenshot of tty
+49:00  - Privesc via Yossi being in Disk Group (debugfs)
+50:15  - Grabbing ssh root key off /dev/sda1
+52:15  - Attempting RationLove (Fails, apparently machine got patched so notes were wrong /troll)
+01:07:42  - Manually exploiting the SQL Injection! with Python
+
+
+HackTheBox - CrimeStoppers
+https://www.youtube.com/watch?v=bgKth1K44QA&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=6&t=0
+
+01:18  - Begin of Recon: Getting ubuntu version
+04:00  - Navigating to the CrimeStoppers Page
+05:15  - First Hint - Read The Source!
+05:50  - 2nd Hint - No SQL Databases and playing with the upload form
+07:55  - 3rd Hint - Setting Admin cookie to 1 to see whiterose.txt
+09:00  - Explanation of PHP App and why I went down testing $op parameter
+10:45  - Testing $op parameter, another hint what year is it?
+12:20  - Finding out $op appends .php
+13:05  - Using php b64 filter to view php files ("Read the source luke")
+22:50  - Looking into PHP Wrappers to try to gain code execution
+24:50  - Placing our PHP Script in a zip so we can reference it with zip://, also improperly upload it to the server
+26:20  - Attempting to use the zip:// wrapper to execute our php script, then troubleshooting the bad upload.
+30:30  - Easy way to copy binary data into BurpSuite (Base64)
+34:10  - Getting a shell
+37:18  - Downloading ThunderBird Directory and reading email + getting dom's password
+46:20  - Begin of looking into Apache Rootkit (mod_rootme)
+48:04  - Begin of using r2 (Radare) to analyze rootkit, basic intro
+50:55  - Analyzing DarkArmy Function
+55:30  - Grabbing the strings and using python to XOR them to get secret that allows root
+58:35  - Get Root
+59:10  - Potential rabbit hole in the binary /var/www/html/whiterose.txt in the binary
+01:04:20  - Second way to get root, looking around at file modification times to find FunSociety in logs
+
+
+HackTheBox - Kotarak
+https://www.youtube.com/watch?v=38e-sxPWiuY&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=7&t=0
+
+01:38  - Start of nmap
+03:40  - Accessing port 60000
+06:20  - Manually enumerating ports on localhost via SSRF
+07:00  - Using wfuzz to portscan localhost via SSRF
+10:00  - Tomcat creds exposed &amp; Uploading tomcat reverse shell
+13:40  - Return of shell
+14:20  - Extracting NTDS + SYSTEM Hive
+20:20  - Using HashKiller to crack the hashes
+21:30  - Escalating to Atanas &amp; Identifying wget vulnerability
+27:10  - Starting exploit
+33:22  - Exploit failed, light debugging
+35:40  - Issue found, not listening all interfaces
+39:35  - Root shell returned.
+40:10  - Unintentional Root Method (Edited Footage, IP Change)
+
+
+HackTheBox - Shrek
+https://www.youtube.com/watch?v=tI592BjTd4o&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=8&t=0
+
+01:00  - Nmap
+02:23  - Examining the Web Page
+04:08  - GoBuster
+04:53  - Finding /uploads/ Directory
+05:50  - Finding /secret_area_51/ Directory
+06:20  - Using Audacity to find Steg in Audio
+08:50  - FTP With Creds revealed from Steg
+10:06  - Examining files downloaded from FTP
+12:43  - Finding decryption key + blob
+14:33  - Using Python seccure to decrypt ecc
+16:05  - SSH Into Shrek as SEC
+16:35  - Farquad Rabbit Hole
+17:42  - Incident Response : Finding files modified between two times
+20:47  - What is /usr/src/thoughts.txt?
+21:45  - Privesc through cron running: chown *
+
+
+HackTheBox - Calamity
+https://www.youtube.com/watch?v=EloOaaGg3nA&list=PLidcsTyj9JXJlmHwZScT3He3rO4ni-xwH&index=9&t=0
+
+01:28  - Begin of recon
+02:20  - GoBuster
+03:30  - admin.php discovered, finding the pw
+04:50  - Getting Code Execution
+07:45  - Finding out why Reverse Shells weren't working
+09:45  - Getting a reverse shell by renaming nc
+11:30  - Transfering files via nc
+14:00  - Opening the wav file
+16:25  - Using audiodiff to identify differences in sound
+17:05  - The next step, why is the same song there twice?
+19:25  - Importing files into Audacity and Inverting
+22:25  - Attempting to exploit the process blacklist
+24:25  - Unintended root LXC Background
+28:30  - Creating an Alpine LXC
+30:40  - Importing the image into lxc
+32:00  - Creating the container
+32:40  - Adding the host drive to container
+34:20  - Starting the container and entering it
+35:05  - Examining the Process Blacklist script
+35:54  - Running through the exploit again on a Ubuntu Host
+
+
+HackTheBox - Olympus
+https://www.youtube.com/watch?v=7ifJOon5-G8&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=10&t=0
+
+01:30  - Begin of Recon, nmap filtered explanation
+03:30  - Begin of initial DNSRecon, hunting for a domain name
+06:04  - Web page enumeration, finding xdebug in header
+09:47  - Installing xdebug plugin in Chrome to show its use
+12:50  - Getting a reverse shell on the first docker (Icarus)
+15:00  - Setting up nginx to accept files uploaded over HTTP / WebDav
+20:30  - Examining the Wireless Capture from Icarus
+21:30  - Cracking WPA with aircrack / hashcat
+25:00  - Decrypting WPA traffic in Wireshark
+27:50  - Enumerating valid usernames via SSH (CVE-2018-15473)
+33:15  - SSH into port 2222 with information from Wireless Capture
+34:40  - Domain Name found!  Time to do a DNS Zone Transfer
+36:15  - Port Knocking to open up port 22
+40:05  - PrivEsc to root via being a member of the Docker Group
+
+
+HackTheBox - Canape
+https://www.youtube.com/watch?v=rs75y2qPonc&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=11&t=0
+
+00:43  - Start of Recon, nmap and poking around the website
+04:00  - Dirbusting a site that always respond 200
+09:43  - Switching to a different Wordlist (SecLists/Discovery/Web/Common)
+10:48  - Discovery of .git - Poking around to clone it and download
+15:10  - Downloaded .git, examining commit history
+19:50  - Start of Pickle Talk
+21:25  - Begin writing of the pickle exploit
+28:45  - Return of Reverse Shell as www-data
+32:30  - Begin looking into CouchDB
+34:00  - Poking around at documents within CouchDB
+36:15  - Examining first exploit with creating a CouchDB User
+39:50  - Exploring the passwords database with our newly created admin user and finding Homers Password.
+42:00  - Getting root with sudo pip install
+45:55  - Box Done.  Begin second unintended way to get to Homer User
+47:03  - Playing with the public RCE Exploit for CouchDB
+48:20  - Running the exploit
+49:36  - Examining the exploit, doing each step manually to see where it fails
+54:30  - Searching on how to create a new CouchDB Cluster, maybe it will allow this work?
+55:55  - Digging into how erlang works
+57:30  - Finding default CouchDB Cookie
+59:10  - Connecting to the Erlang pool then searching for how to run commands.
+01:01:54  - Exploring how to send long commands as distributed task
+01:04:30  - Getting reverse shell
+
+
+HackTheBox - Poison
+https://www.youtube.com/watch?v=rs4zEwONzzk&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=12&t=0
+
+00:56  - Start of recon, use Bootstrap XSL Script to make nmap pretty
+03:10  - Looking at nmap in web browser
+03:52  - Navigating to the web page, and testing all the pages.
+06:25  - Testing for LFI
+07:00  - Using PHP  Filters to view the contents of php file through LFI (Local File Inclusion)
+08:40  - Testing for RFI (Remote File Inclusion) [not vuln]
+10:00  - Code Execution via LFI + phpinfo()
+14:45  - Modifying the PHP-LFI Script code to get it working
+17:10  - Debugging the script to see why tmp_name couldn't be found
+20:12  - Shell returned!
+21:25  - Looking at pwdbackup.txt and decoding 13 times to get password.
+23:37  - SSH into the box (Do not privesc right away!)
+24:29  - Getting shell via Log Poisoning
+26:39  - Whoops.  Broke the exploit, because of bad PHP Code... We'll come back to this! (<a href="#" onclick="yt.www.watch.player.seekTo(42*60+50);return false
+28:47  - Begin of PrivEsc, grabbing secret.zip off
+32:38  - Searching for processes running as root, find VNC
+33:49  - Setting up SSH Tunnels without exiting SSH Session.
+37:43  - Something weird happend... Setting up SSH Tunnels manually.
+40:10  - PrivEsc: VNC through the SSH Tunnel, passing the encrypted VNC Password
+41:40  - Decrypting the VNC Password because we can.
+42:50  - Examining the log file to see why our Log Poison Failed, then doing the Log Poison
+
+
+HackTheBox - Stratosphere
+https://www.youtube.com/watch?v=uMwcJQcUnmY&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=13&t=0
+
+01:11  - Begin of recon
+03:48  - Manually checking the page out
+04:30  - Discovering the webserver is java/tomcact
+05:35  - Starting up GoBuster / Hydra
+09:40  - The Directory /Monitoring was found - Discovering its Struts because of .action
+11:00  - Stumbling upon an exploit trying to find out how to enumerate Struts Versions
+14:10  - Searching Github for CVE-2017-5638 exploit script, exploiting the box to find out its firewalled off
+21:10  - Using a HTTP Forward Shell to get around the strict firewall
+22:40  - Go here if you want to start copying the Forward Shell Script
+23:34  - Explaining how it works
+25:10  - Explaining the code
+31:06  - Forward Shell Returned - Enumerating Database to find creds
+37:29  - Examining User.py
+40:15  - Privesc: Abusing Python's Path to load a malicious library and sudo user.py
+
+
+HackTheBox - Celestial
+https://www.youtube.com/watch?v=aS6z4NgRysU&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=14&t=0
+
+00:58  - Begin of Recon
+03:00  - Looking at the web application and finding the Serialized Cookie
+04:38  - Googling for Node JS Deserialization Exploits
+06:30  - Start of building our payload
+07:10  - Examining Node-Serialize to see what the heck _$$ND_FUNC$$_ is
+09:10  - Moving our serialized object to "Name", hoping to get to read stdout
+11:30  - Really busing the deserialize function by removing the Immediately Invokked Expression (IIFE)
+13:25  - Failing to convert an object (stdout) to string.
+14:02  - Verifying code execution via ping
+15:32  - Code execution verified, gaining a shell
+18:49  - Reverse shell returned, running LinEnum.sh
+21:26  - Examining logs to find the Cron Job running as root
+22:09  - Privesc by placing a python root shell in script.py
+24:15  - Going back and getting a shell with NodeJSShell
+
+
+HackTheBox -  Aragog
+https://www.youtube.com/watch?v=NFdi-2tgvxY&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=15&t=0
+
+01:26  - Start of Recon
+03:25  - Notice SSH configured for Pub Key Only.  Hint at what to grab later!
+03:50  - Grabbing test.txt off ftp server via anonymous auth
+04:07  - Determining if I want to go down the "Exploit VSFTPD" rabbit hole
+05:54  - Viewing test.txt and hosts.php
+06:48  - Figuring out how hosts.php works and discovering XXE
+08:58  - Start of XXE Discovery
+10:16  - Making the XXE Output /etc/passwd
+11:33  - Encoding output in Base64 in order to view PHP Files
+12:58  - Using Burp Intruder to BruteForce Files
+16:20  - Creating a program to bruteforce home directories
+26:41  - Program Finished.  Finding SSH ID_RSA Key
+28:15  - Low Priv Access Granted
+30:24  - LinEnum.sh shows Wordpress CHMOD'd to 777
+31:05  - Examining Wordpress Site (big hint left by author)
+32:10  - Enumerating MySQL Database
+35:15  - Giving up on MySQL, lets edit PHP Files to dump passwords!
+36:50  - Identifying the file we want to backdoor
+37:51  - Placing our PHP Code
+42:06  - Got the password!
+
+
+HackTheBox - Flux Capacitor
+https://www.youtube.com/watch?v=XLIBbkQJKuY&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=16&t=0
+
+01:25  - Begin of recon
+02:20  - Wiresharking NMAP to identify fingerprint
+05:53  - Checking the WebPage
+09:15  - Finding /sync and why web browser has a 403
+12:45  - Using wfuzz to find what arguments /sync takes
+15:45  - The actual wfuzz command
+20:30  - Finding Bad Characters with wfuzz
+24:51  - Getting command execution
+32:00  - Getting a reverse shell
+43:40  - Privesc to root abusing custom script
+47:48  - Examining how NGINX/OpenResty was configured
+
+
+HackTheBox - Inception
+https://www.youtube.com/watch?v=J2I-5xPgyXk&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=17&t=0
+
+01:05  - Start of Recon + Finding dompdf
+08:30  - PHP Wrappers + Failed testing for RCE
+11:35  - Writing Python Program to automate file disclosure bug
+18:40  - Finding WebDav Configuration + Uploading Files for RCE
+25:50  - Modifying Sokar's Forward Shell (PTY over HTTP)
+33:55  - Forward shell returned
+38:50  - Using Squid to pivot to ports listening locally + NMAP via ProxyChains
+47:48  - Getting nmap on Inception to speed up scanning private network
+59:16  - Nmap results returned for 192.168.0.1, FTP Anonymous Login
+1:01:15  - Finding TFTP as a Running Service
+1:06:35  - Using TFTP to grab crontab &amp; creating a pre-invoke apt script
+
+
+HackTheBox - Enterprise
+https://www.youtube.com/watch?v=NWVJ2b0D1r8&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=18&t=0
+
+01:00  - Begin of recon
+10:00  - Finding the vulnerable Wordpress Plugin
+17:50  - Exploiting lcars plugin
+28:30  - Logging into WP and Getting Reverse Shell
+35:00  - Wordpress RevShell Returned
+40:00  - Using Meterpreter to pivot and provide access to MySQL
+50:00  - MySQL Shell Returned
+52:00  - Logging into Joomla and Getting Reverse Shell
+57:20  - Joomla Reverse Shell returned
+59:00  - Getting Reverse Shell on Host OS (port 443)
+1:02:00  - Shell Returned begin of local privesc recon
+1:12:06  - Beginning of Binary Exploitation
+1:21:00  - Start writing exploit script
+1:28:30  - Analyzing the PHP SQL Injection Scripts
+1:36:30  - Viewing what SQLMap does to exploit this
+1:40:00  - Stepping through Double Query Injection
+1:47:20  - Writing our own SQL Injection Exploit Script
+
+
+HackTheBox - Node
+https://www.youtube.com/watch?v=sW10TlZF62w&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=19&t=0
+
+00:45  - Begin of NMAP
+03:00  - GoBuster (Fails)
+08:15  - Screw GoBuster, BurpSpider FTW
+09:12  - Examing Routes File to find more pages
+10:10  - Finding Credentials and downloading backup
+14:45  - Cracking the zip with fcrackzip
+16:45  - Finding more credentials (SSH) within MongoSource
+21:50  - Privesc to Tom User
+35:04  - Analyzing Backup Binary File
+36:49  - Using strace to find binary password
+40:25  - Finding blacklisted characters/words
+50:00  - Unintended method one, abusing CWD
+52:20  - Unintended method two, wildcards to bypass blacklist
+54:45  - Unintended method three, command injection via new line
+59:15  - Intended root Buffer Overflow ASLR Brute Force
+
+
+HackTheBox - LightWeight
+https://www.youtube.com/watch?v=yQgtDoCDAYk&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=2&t=0
+
+00:45  - Begin of recon, Nmap
+01:30  - Taking the CentOS Apache Version to find major version
+03:20  - Running GoBuster with a Common-PHP-Files wordlist.
+06:00  - Enumerating Ldap with ldapsearch
+07:30  - Discovery of Password Hashes within ldap information
+10:55  - Attempting to crack the hashes. (does not crack)
+12:30  - Back to the web page
+13:15  - Page says to login with ip@Lightweight with the password of your ip
+15:35  - Running LinEnum
+20:15  - Discovery of Extended Capabilities set on tcpdump
+20:50  - Performing a packet capture over SSH without touching disk
+23:45  - Examining the pcap created, don't see anything on ens33
+24:20  - Performing a packet capture through SSH and piping live results to WireShark
+26:00  - Discovery of LDAP Traffic, ldapuser2 password passed in clear-text
+28:15  - Using bash to exfil a file over the network (backup.7z)
+29:25  - Using 7z2john and hashcat to crack a 7zip file
+32:05  - Examining extracted files to discover a new credential (ldapuser1)
+33:30  - The openssl binary in ldapuser1 has an empty capability (which is all)
+35:00  - Using GTFOBins to see what we can do with openssl
+37:11  - Reading /etc/shadow with openssl
+37:35  - Adding an entry into /etc/sudoers to allow us to escalate to root
+
+
+HackTheBox - SolidState
+https://www.youtube.com/watch?v=_QapCUx55Xk&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=20&t=0
+
+
+
+
+HackTheBox - Nineveh
+https://www.youtube.com/watch?v=K9DKULxSBK4&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=21&t=0
+
+00:00  - Intro
+01:58  - Begin Recon (NMAP)
+04:19  - GoBuster HTTP + HTTPS
+06:35  - Accessing Pages
+07:05  - Using Hydra against HTTP + HTTPS Web Forms
+11:30  - Logging into HTTP and hunting for vulns
+17:00  - Second Hydra attempt against HTTPS
+17:57  - Logging into HTTPS (phpLiteAdmin)
+20:17  - Chaining Exploits to get Code Execution
+26:38  - Reverse Shell Returned
+28:00  - LinEnum.sh Script Review
+31:30  - Watching for new Processes
+37:00  - Found the error in script :)
+39:30  - Getting reverse root shell
+41:51  - Intended Route to get User
+46:12  - Reviewing Knockd configuration
+49:33  - Doing the PortKnock
+
+
+HackTheBox - Europa
+https://www.youtube.com/watch?v=OsxDB41jg6A&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=22&t=0
+
+00:24  - Recon with Sparta
+02:00  - Enumerating SSL Certificate
+03:55  - Manually View SSL Certificate
+04:35  - VirtualHostRouting Explanation
+07:42  - SQL Injection - Auth Bypass
+13:00  - Dumping the Database with SQLMap
+16:45  - Begin of Web Exploit (Regex //e)
+23:00  - Getting a Shell
+27:10  - Begin PrivEsc (CronJob)
+
+
+HackTheBox - Apocalyst
+https://www.youtube.com/watch?v=TJVghYBByIA&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=23&t=0
+
+01:26  - Enumeration Start
+02:58  - WPScan Start
+05:40  - Directory Scanning with GoBuster
+10:54  - Examining WPScan Output
+13:40  - Bruteforcing with WPScan
+14:40  - Bruteforcing HTTP Post with Hydra
+18:30  - Edit WP Theme to get Code Execution
+22:09  - Return of Reverse Shell
+26:25  - Privelege Escalation Word Writeable Passwd
+
+
+HackTheBox - Sneaky
+https://www.youtube.com/watch?v=1UGxjqTnuyo&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=24&t=0
+
+00:00  - Intro
+00:44  - Recon + Web Enum
+01:33  - SQL Injection
+05:30  - Start of IPv6 Talk
+06:30  - What is an IPv6 IP Address?
+11:27  - Types of IPv6 Addresses
+14:06  - IPv6 Subnetting Explained
+21:20  - End of IPv6 Primer, Exploit time!
+22:43  - Method 1: Getting MAC and calculating fe80
+30:30  - Method 2: Enumerating Networks by pinging Multicast
+33:56  - Extra: Getting Windows to respond from Multicast Ping
+38:07  - Extra: NMAP Scanning ipv6 local networks
+40:15  - Convert RPM to DEB (Needed for install nmap on tenten)
+41:30  - Intended Solution: Getting IPv6 via SNMP
+43:58  - No SNMP MIB Output
+45:58  - Getting SNMP MIBS Installed and Configured
+47:52  - Tool: Enyx - SNMPv6 Enumeration via Python
+50:44  - Privesc Enumeration
+52:49  - Buffer Overflow
+
+
+HackTheBox - Lazy
+https://www.youtube.com/watch?v=3VxZNflJqsw&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=25&t=0
+
+00:39  - Basic Web Page Discovery
+03:30  - Examining Cookies - Pt1 (Burp Sequencer)
+05:05  - Fuzzing Usernames (2nd Order SQL Injection)
+07:15  - Examining Cookies - Pt2
+07:40  - Cookie Bitflip
+12:45  - Oracle Padding Attack - Pt1
+15:30  - Rooting the Box
+22:50  - Oracle Padding Attack - Pt2
+
+
+HackTheBox - Haircut
+https://www.youtube.com/watch?v=9ZXG1qb8lUI&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=26&t=0
+
+01:45  - GoBuster
+04:40  - Exploiting exposed.php
+11:40  - Getting Shell
+20:09  - Screen Privesc
+
+
+HackTheBox - CronOS
+https://www.youtube.com/watch?v=CYeVUmOar3I&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=27&t=0
+
+
+
+
+HackTheBox  - Tenten
+https://www.youtube.com/watch?v=A4U3xiRWfsU&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=28&t=0
+
+
+
+
+HackTheBox - October
+https://www.youtube.com/watch?v=K05mJazHhF4&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=29&t=0
+
+00:45  - Pulling up Web Page.
+01:10  - Searchsploit
+02:40  - Enumerating Version (Download Versions, Hash Static Files)
+08:20  - Default cred /backend -- Upload Shell
+09:51  - User Reverse Shell
+12:10  - Transfering file over nc
+14:45  - Begin "fuzzing" Binary
+16:15  - GDB Analysis
+18:46  - Get a full reverse shell with tab autocomplete.
+19:00  - Showing ASLR changing address
+20:20  - Disable ASLR on Exploit Dev Machine
+21:15  - Start of exploit development for ovrflw binary (Pattner_Create)
+27:27  - Start of Return to LibC attack - Getting Addresses
+37:20  - Grabbing memory locations off October Machine
+41:00  - Convert script to Bruteforce ASLR
+
+
+HackTheBox - Redcross
+https://www.youtube.com/watch?v=-GNyDEQ9UDU&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=3&t=0
+
+00:20  - Flow chart of potential paths through this box
+02:25  - Begin of recon, SSL Enumeration, examining PHP Behavior
+06:23  - Using GoBuster to dicover directories, pdf's, and php scripts
+08:10  - Using wfuzz to discover subdomains (virtual host routing)
+12:15  - Guessing credential, logging in with guest:guest disover SQL Injection
+16:45  - Manually doing an error-based SQL Injection with extractquery()
+31:50  - A good screenshot showing the SQL Inject Queries used, then cracking
+35:00  - Doing the SQLInjection with SQLMap, needed the delay flag!
+37:50  - Examining the account-signup.pdf to create a user
+39:50  - Doing XSS (cross site scripting) to steal a cookie of  the admin
+43:15  - Going to admin.redcross.htb and showing that any way you got the PHPSESSID cookie would work
+46:15  - Poking at admin.redcross.htb, creating a user that lands us in an SSH Jail
+48:38  - Playing with the Firewall portion of the site, discover command injection in deleting rules!
+52:28  - Reverse shell as www-data
+54:40  - Discover postgresql credentials in actions.php, this database lets you create users!
+1:00:21  - Inserting a user into the database, then logging in with SSH
+1:02:40  - Examining /etc to discover a different postgresql account-signup
+1:04:50  - Adding a root user with the new credentials, then sudo to root!
+1:06:29  - Discovering Haraka running
+1:09:10  - Using Metasploit to exploit haraka, get shell as penelope
+1:12:26  - Doing the PG thing again but this time specify sudo group, so we don't need to use the other PG account.
+1:15:50  - Examining iptctl.c
+1:19:56  - Using Pattern_Create to discover where the RSP (RIP) Overwrite occours.
+1:21:15  - Start of python script
+1:24:11  - Dumping PLT Functions to use with our rop chain (no aslr on binary)
+1:28:00  - Getting pop gadgets with radare
+1:29:40  - Building our ROP Chain
+1:34:28  - Exploiting the binary! To get root.
+
+
+HackTheBox - Popcorn
+https://www.youtube.com/watch?v=NMGsnPSm8iw&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=30&t=0
+
+00:25  - TMUX and Connecting to HTB
+02:00  - Virtual Host Routing Explanation
+02:40  - File Enumeration (Dirb)
+03:59  - Discover of Web App
+05:45  - Starting SQLMap in the Background
+09:30  - Uploading a PHP Shell
+14:01  - Python PTY Reverse Shell (Tab Autocomplete!)
+19:25  - MOTD Root (Method 1)
+23:50  - Dirtyc0w Root (Method 2)
+
+
+HackTheBox - Vault
+https://www.youtube.com/watch?v=LfbwlPxToBc&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=4&t=0
+
+01:08  - Begin of Recon
+03:08  - Begin of GoBustering
+07:15  - Discovery of an image upload script
+08:39  - Attempting to bypass the upload filter
+12:46  - Reverse Shell to ubuntu Returned.  Examining Web Source
+15:28  - ALTERNATIVE: Checking out the host name pollution, setting host header to localhost
+19:27  - Resume of poking around the host, discover passwords and other hosts in /home
+23:14  - Uploading a static-compiled nmap to the box (static-binaries is a github repo)
+24:57  - SSH Local Port Forward and Dynamic, to let our Kali box communicate with the next hop.
+27:27  - Discovery of a page that lets us create ovpn (openvpn) configs and test the VPN
+28:45  - Think i broke the box here, sent unicode to the box.... It stops responding on web.
+32:55  - Machine reverted, getting back to where I started.
+34:50  - Trying this again, and get a shell on ubuntu -- Lets do a Reverse Port Forward to get a shell on our kali box.
+36:12  - Shell returned to Kali Box, explaining how to use socat if SSH Forward cannot listen on all ports.
+38:58  - Exploring the DNS Server box.
+39:26  - Finding a password in /home/dave/ssh
+40:15  - Discovering Vault's IP Address in /etc/hosts
+41:20  - Perfoming a NMAP on the vault box, discover two ports closed
+41:50  - Doing a NMAP with the source port of one of the above ports to test for a lazy firewall, discover SSH on port 987
+43:20  - ALTERNATIVE: Bypassing the firewall by using IPv6
+49:47  - How to set the source port with SSH via ncat
+50:45  - Discovering root.txt.gpg on Vault, it is encrypted with RSA Key D1EB1F03
+51:35  - Dave has the above RSA Key, use SCP to send the file back to Ubuntu
+54:45  - The file has been copied, using gpg to decrypt the file.
+55:39  - MAJOR UNINTENDED WAY: Discovering SPICE ports are listening on localhost:5900-5903, this is like VNC
+57:05  - Using Remote-Viewer to connect to the SPICE Port and getting physical access to the machine.
+57:42  - Rebooting Vault by sending the Ctrl+Alt+delete key
+58:00  - Editing grub to get a root shell without a password
+58:56  - Changing the password to root, then rebooting again
+59:30  - Logging in with the new password.
+
+
+HackTheBox - Carrier
+https://www.youtube.com/watch?v=2ZxRA8BgmnA&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=5&t=0
+
+00:53  - Begin of Recon
+03:30  - Checking out the Web Page
+04:20  - Doing UDP/GoBuster Scans
+08:20  - Running SNMPWalk and then logging into web interface
+10:20  - Reading the tickets on the web page
+12:00  - Discovering code execution
+16:00  - Reverse Shell Returned
+23:15  - Discovering FTP Server 10.120.15.10
+26:00  - Gaining access to a Router Interface
+27:30  - Using Draw.io to draw out the network
+32:40  - Examining routing information
+35:45  - Looking at BGP Information
+39:00  - First attempt at BGP Hijack, advertising a route
+43:30  - Did not work, examining routing loop.
+50:50  - Blocking the routing advertisement to AS300
+56:50  - Showing the new routing loop (AS300 sends to AS200)
+01:00:00  - Telling AS200 not to advertise the route to AS300
+01:04:00  - Grabbing FTP Traffic to get root password
+01:07:00  - Logging into all 3 routers for some fun
+01:08:50  - Hiding from TraceRoute by mucking with TTL's
+01:13:20  - Redoing the attack, but showing routing tables on all routers
+01:17:30  - Unintended route, Just adding an IP to eth2
+
+
+HackTheBox - Waldo
+https://www.youtube.com/watch?v=1klneIHECqY&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=6&t=0
+
+01:15  - Begin of Recon
+02:00  - Looking at what Filtered means in Nmap
+05:00  - Start of looking at webpage (GoBuster)
+06:30  - Manual HTTP Enumeration
+09:50  - Start of exploiting with BurpSuite
+17:00  - SSH Key Found, logging in with nobody
+19:12  - Discovering a second SSH Server
+23:36  - Using the same SSH Key to login to the second SSH Server as monitor
+24:38  - Escaping rBash by modifying an executable file in our current $PATH
+28:13  - Running LinEnum.sh to search for PrivEscs
+30:50  - Enabling ThoroughTests in LinEnum to see what else it will check
+36:30  - Looking into capabilities permission sin linux
+39:00  - Begin of second way to escape rBash and setup a SSH Tunnel for fun
+
+
+HackTheBox - Hawk
+https://www.youtube.com/watch?v=UGd9JE1ZXUI&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=7&t=0
+
+01:00  - Begin nmap, discover FTP, Drupal, H2, and its Ubuntu Beaver
+03:50  - Checking FTP Server for hidden files
+04:30  - Examining encrypted file, discovering encrypted with OpenSSL and likely a block cipher
+08:20  - Creating a bunch of files varying in length to narrow likely ciphers down.
+14:35  - Encrypting all of the above files and checking their file sizes
+22:45  - Decrypting file, obtaining a password
+24:25  - Begin looking at Drupal, running Droopescan
+25:12  - Manually examining Drupal, finding a way to enumerate usernames
+25:50  - Placing invalid emails in create account, is a semi-silent way to enumerate usernames
+28:15  - Logging into Drupal with Admin.
+29:25  - Gaining code execution by enabling PHP Plugin, then previewing a page with php code
+32:30  - Reverse Shell Returned
+33:25  - Running LinEnum.sh - Discover H2 (Database) runs as root
+37:00  - Hunting for passwords in Drupal Configuration
+39:25  - Finding database connection settings.  SSHing with daniel and the database password (not needed)
+40:10  - Doing Local (Daniel) and Reverse (www) SSH Tunnels.  To access services on Hawk’s Loopback.  Only need to do one of those, just showing its possible without daniel
+44:30  - Accessing Hawk’s H2 Service (8082) via the loopback address
+50:00  - Finding the H2 Database Code Execution through Alias Commands, then hunting for a way to login to H2 Console.
+51:45  - Logging into H2 by using a non-existent database, then testing code execution
+52:50  - Playing with an awesome Reverse Shell Generator (RSG), then accidentally breaking the service.
+59:50  - Reverted box, cleaning up environment then getting reverse shell
+01:02:45  - Discovering could have logged into the database with Drupal Database Creds.
+
+
+HackTheBox - Tartarsauce
+https://www.youtube.com/watch?v=9MeBiP637ZA&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=8&t=0
+
+01:10  - Begin of recon
+03:00  - Discovery of Wordpress and fixing broken links with burp
+06:50  - Start of WPScan
+07:14  - Start of poking at Monstra, (Rabbit Hole)
+13:05  - Back to looking at WPScan, Find Gwolle Plugin is vulnerable to RFI Exploits
+16:30  - Reverse shell returned as www-data
+18:08  - Confirming monstra was read-only
+18:50  - Running LinEnum.sh to see www-data can run tar via sudo
+20:30  - Use GTFOBins to find a way to execute code with Tar
+22:00  - Begin of Onuma user, use LinEnum again to see SystemD Timer of a custom script
+24:10  - Examining backuperer script
+26:00  - Hunting for vulnerabilities in Backuperer
+32:15  - Playing with If/Then exit codes in Bash.  Tuns out exit(0/1) evaluate as True, 2 is false
+34:20  - Begin of exploiting the backuperer service by exploiting intregrity check
+36:40  - Creating our 32-bit setuid binary
+39:16  - Replacing backup tar, with our malicious one.  (File Owner of Shell is wrong)
+40:54  - Explaning file owners are embedded within Tar, creating tar on our local box so we can have the SetUID File owned by root
+42:30  - Exploiting the Backuperer Service via SetUID!
+45:00  - Unintended Exploit: Using SymLinks to read files via backuperer service
+
+
+HackTheBox - DevOops
+https://www.youtube.com/watch?v=tQ34Ntkr7H4&list=PLidcsTyj9JXJKC2u55YVa5aMDBRXsawhr&index=9&t=0
+
+00:54  - Start of Recon
+03:10  - Start of GoBuster
+04:00  - Looking at /upload, testing with a normal XML File
+06:15  - Valid XML File created, begin of looking for XML Entity Injection XXE
+08:20  - XXE Returns a a local file off the server
+09:30  - Grabbing the source code to the webserver to find newpost function.
+11:35  - Discovery of vulnerability due to user data being passed to pickle
+12:44  - Creating the script to exploit pickle
+16:38  - Reverse shell returns!
+19:55  - Poking around at Source Code
+20:15  - Discover of an SSH Key within deployment stuff.
+21:15  - Trying SSH Key for other users on the box to see if it is valid
+22:57  - Hunting for git filers, the boxes name is "Gitter" and we have an SSH Key that goes nowhere.
+23:00  - Discovery ~roosa/work is the same as ~roosa/deploy but there's a .git repo in this one!
+23:45  - Examining Git Log to see the SSH Key has changed!
+25:20  - SSH'ing with the old key, to see it's root's key.
+25:58  - The webserver could read Roosa's SSH Key.  Could bypass the entire pickle portion
+26:20  - Start of "Extra Practice"
+27:40  - Creating a Python Script to automate the LFI With XXE
+35:50  - Script completed, lets improve it to try to download an exposed git repo
+
+
+HackTheBox - Sense
+https://www.youtube.com/watch?v=d2nVDoVr0jE&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=11&t=0
+
+01:20  - Star of Recon
+03:40  - GoBuster
+04:45  - Getting banned and Pivoting to verify
+10:20  - Logging into PFSense
+16:50  - Manually Exploiting PFsense
+38:30  - Using Metasploit to exploit
+42:00  - Creating a Bruteforce Script in Python ( CSRF )
+
+
+HackTheBox - Shocker
+https://www.youtube.com/watch?v=IBlTdguhgfY&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=12&t=0
+
+00:39  - Begin Nmap, OS Enum via SSH/HTTP Banner
+05:00  - GoBuster
+07:08  - Viewing CGI Script
+08:50  - Begin NMAP Shellshock
+09:50  - Debugging Nmap HTTP Scripts via Burp
+11:10  - Fixing the HTTP Request &amp; nmap script
+14:45  - Performing Shellshock &amp; more fixing
+18:25  - Getting a reverse shell
+21:19  - Running LinEnum.sh
+23:00  - Rooting the box
+
+
+HackTheBox - Mirai
+https://www.youtube.com/watch?v=SRmvRGUuuno&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=13&t=0
+
+00:49  - Nmap
+01:31  - Examining some odd behavior. Nmap different result than browser.
+04:00  - Getting to /admin and testing for Zone Transfer
+05:40  - Testing SSH Default Raspberry Pi Creds
+06:11  - Escalate to root 'sudo su'
+07:10  - Recovering the deleted root.txt
+08:38  - GrepFu
+10:40  - Downloading /dev/sdb via SSH
+12:48  - Running Binwalk against it
+13:18  - Trying to recover with TestDisk
+14:37  - Trying to recover with PhotoRec
+
+
+HackTheBox - Blocky
+https://www.youtube.com/watch?v=C2O-rilXA6I&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=14&t=0
+
+01:15  - Begin Recon with Reconnoitre
+03:15  - Examining findings from Reconnoitre
+06:50  - Decompiling java Jar Files with JAD
+08:18  - Using JD-GUI
+10:33  - Running WPScan
+12:10  - Manually enumerating wordpress users
+12:43  - SSH To the box and PrivEsc
+15:30  - Rabbit hole, gaining access through FTP
+17:09  - Finding Wordpress DB Password
+18:33  - Switching to WWW-DATA by using phpMyAdmin + Wordpress
+20:10  - Generating a PHP Password for Wordpress
+21:50  - Gaining code execution with Wordpress Admin access
+25:40  - Shell as www-data
+26:40  - Enumerating Kernel Exploits with Linux-Exploit-Suggester
+30:10  - Attempting CVE-2017-6074 Dccp Kernel Exploit (Unstable AF)
+
+
+HackTheBox - Bank
+https://www.youtube.com/watch?v=JRPWFSzFaG0&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=15&t=0
+
+00:39  - Nmap Results
+01:15  - DNS Enumeration
+04:08  - HTTP VirtualHost Routing
+05:28  - DirSearch (Web Enumeration)
+08:50  - HTTP Redirect Vulnerability
+13:23  - PW in Balance-Transfer
+18:00  - File Upload, WebShell
+21:48  - First Shell
+30:10  - First Privesc Method (SUID)
+31:38  - Second Privesc Method (passwd)
+
+
+HackTheBox - Beep
+https://www.youtube.com/watch?v=XJmBpOd__N8&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=16&t=0
+
+1:35  - Method 1: LFI + Password
+16:03  - Method 2: Turning LFI into RCE
+37:46  - Method 3: Code exec via call
+54:00  - Method 4: Shellshock
+
+
+HackTheBox - Help
+https://www.youtube.com/watch?v=XB8CbhfOczU&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=2&t=0
+
+00:49  - Begin of recon
+01:45  - Running gobuster to find /support
+02:50  - Searching for a way to find version of HelpdeskZ
+03:35  - Reading over the File Upload exploit script to see it requires server time
+05:10  - Uploading a PHP Reverse Shell Script
+07:45  - Going back to GitHub to find where uploads are saved
+09:10  - Begin of modifying the script to pull the server time out of HTTP Headers
+10:30  - Figuring out the python to pull the "Date" HTTP Header
+14:30  - Getting the Time Format right with STRFTIME.COM
+19:40  - Testing out the exploit and getting a shell
+23:20  - Discovery of an old kernel, looking for an exploit
+24:30  - Copying the exploit, compiling, and privesc!
+25:50  - Looking into port 3000
+27:00  - /graphql discovered
+27:42  - Dumping the schema to discover what data is inside
+30:15  - Dumping username, password from the database
+32:12  - Logging into HelpdeskZ
+33:40  - Discovering the Boolean SQL Injection
+34:50  - Running SQLMap
+36:00  - Explaining the Injection
+37:10  - Begin of creating a python script to exploit this
+
+
+HackTheBox - Irked
+https://www.youtube.com/watch?v=OGFTM_qvtVI&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=3&t=0
+
+31:35 .  Sorry, was an extremely busy week and didn't get to verify everything was good.
+00:39  - Begin on Recon
+01:39  - Starting a full nmap scan
+04:15  - Discovery of IRC
+04:35  - Manually looking at IRC
+06:00  - Looking at the IRC to understand how to connect to an IRC Server
+07:00  - Pulling the IRC Version and discovering the exploit
+08:50  - Going into the history of the IRC Backdoor
+09:45  - Manually exploiting the IRC Server
+13:10  - Shell returned on the server
+14:30  - Discovery of .backup which gives a steg password
+16:45  - Logging in with djmardov
+21:20  - Discovery of SetUID enabled custom binary, viewuser
+23:25  - Using ltrace to see what the binary does, executes the file /tmp/listusers
+23:50  - Getting a root shell
+25:50  - Testing exploiting the binary with "who", fails due to no setuid
+27:50  - Looking at the binary within Ghidra
+
+
+HackTheBox - Teacher
+https://www.youtube.com/watch?v=u2-te8n2WbY&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=4&t=0
+
+00:40  - Begin of recon
+02:00  - Poking around at the website to identify what techologies it utilizes
+02:30  - Discovering something odd about images/5.png
+03:25  - Downloading 5.png to discover it is a text file with a portion of a password
+06:00  - Finding a place to login (/moodle), attempt to enumerate valid usernames
+08:00  - Using wfuzz to bruteforce the password
+11:20  - Looking for a way to enumerate Moodle Versions
+13:20  - Searching for exploits for this version and finding "Bad Teacher"
+14:40  - Start of manually exploiting this vulnerability
+16:00  - Adding a "Calculated Question" which has the formula (vulnerable) parameter
+20:16  - Finding artifacts of creating/testing the machine which spoils what we are supposed to do
+24:21  - Fixing our forumla to allow for code execution
+28:30  - Getting a reverse shell
+30:00  - Looking around the MySQL Database to discover hashes of other users
+31:52  - The account Giovannibak stands out due to the hash being just MD5
+32:30  - Attempting the password (expelled) of the MD5 hash above to login to "Su" to Giovannibak
+36:20  - Grabbing and compiling pspy to find a cronjob
+38:30  - Running PSPY to discover /usr/bin/backup.sh
+40:00  - Abusing the backup cron to have it chmod 777 /etc/shadow (could do anything, sudoers is a bit less noisy)
+
+
+HackTheBox - Curling
+https://www.youtube.com/watch?v=Paajc2Dupms&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=5&t=0
+
+01:12  - Begin of Recon
+01:55  - Running Cewl to generate a wordlist
+02:50  - Finding secret.txt in the HTML Source, which happens to be the password
+03:28  - Runninh JoomScan so we have something running in the background
+04:20  - Checking the manifest to get the Joomla Version
+06:20  - Explaining what equals mean in base64
+07:50  - Begin of hunting for Joomla Username
+08:30  - BruteForcing Joomla Login with WFUZZ
+10:35  - Troubleshooting by sending wfuzz through burp
+12:25  - Turns out the CSRF Token is tied to cookie, adding that to the wfuzz command
+17:10  - Success! Logged into Joomla
+17:58  - Gaining code execution by modifying a template
+20:20  - Getting a reverse shell
+23:20  - Finding the file: password_backup which is encoded
+23:55  - Extracting password_backup manually with xxd, zcat, bzcat, tar
+25:43  - Extracting Password_Backup with CyberChef
+27:35  - Logging in with Floris
+28:17  - Looking at /home/floris/AdminArea
+28:50  - Testing the input file by changing the url to us
+29:30  - Getting LFI by using file:// within curl
+30:38  - Pulling the cron, to see what is going on
+31:25  - Cron shows curl -K to use curl with a config file, checking man page.
+32:05  - Changing where curl saves to, in order to gain a root shell
+33:45  - Showing another good file to read with the LFI (logs)
+34:18  - Using pspy to show when processes start/end, which shows the curl command with no exploits
+
+
+HackTheBox - Frolic
+https://www.youtube.com/watch?v=b6WGQSJu_zQ&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=6&t=0
+
+01:16  - Begin of Recon, until around 13 minutes gathering information to avoid rabbit holes
+04:04  - Using nc/ncat to verify a port is open (-zv)
+11:17  - Doing gobuster across man of the sub directories
+13:03  - Examining /admin/ - Examine the HTML Source because login is not sending any data
+14:09  - Discover some weird text encoding (Ook), how I went about decoding it
+15:44  - Decoded to base64 with some spaces, clean up the base64 and are left with a zip file
+19:19  - After cracking the zip, there is another text encoding challenge (BrainF*)
+25:11  - With potential information, return to our long running recon for more information
+28:49  - Discovering /playsms
+32:00  - Reading ExploitDB Articles and then attempting to manuall exploit PlaySMS via uploading a CSV
+34:34  - Getting a reverse shell
+39:00  - Running LinEnum.sh
+40:00  - Finding the SetUID file: rop
+42:00  - Exploiting ROP Program with ret2libc
+45:30  - Getting offsets of system, exit, /bin/sh from libc using ldd, readelf, and strings
+50:34  - Running our exploit to get root shell
+54:00  - Begin of recovering rop.c source code
+56:41  - Recreating rop.c then compiling
+59:44  - Copying the physical disk to our local box via SSH and DD
+01:01:44  - Using PhotoRec to restore files and finding rop.c
+
+
+HackTheBox - Sunday
+https://www.youtube.com/watch?v=xUrq29OTSuM&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=7&t=0
+
+00:48  - Begin of NMAP Discovery of Finger
+03:36  - Enumerating Finger with Finger-User-Enum
+05:00  - Nmap'ing all port quickly by lowering max-retries
+08:40  - Adding an old Key Exchange Alogorithm to SSH
+09:30  - Showing Hydra doesn't work, then using Patator
+11:19  - Using find to count lines in all wordlist files
+14:07  - Logged in with sunny:sunday
+14:45  - Grabbing /backup/shadow.backup and cracking sha256crypt with Hashcat
+16:46  - Just noticed this box is oooooold, try to privesc with sudo and ShellShock (Fail)
+18:53  - Privesc by overwriting the /root/troll binary
+23:30  - Using wget to exfil files quickly
+24:50  - Viewing what wget --post-file looks like
+25:50  - Creating a PHP Script to accept uploaded files
+27:30  - Hardening our upload location to prevent executing PHP Files and/or reading what was uploaded
+29:10  - Starting a php webserver with php -S (ip):(port) -t .
+31:10  - Replacing the root password by changing the shadow file
+33:30  - Demoing a way to create directories and upload files!
+
+
+HackTheBox - Valentine
+https://www.youtube.com/watch?v=XYXNvemgJUo&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=8&t=0
+
+00:25  - Start of Recon, identifying end of life OS from nmap
+03:20  - Running vulnerability scripts in nmap to discover heartbleed
+04:16  - Going to the HTTP Page to see what it looks like
+06:30  - Begin of Heartbleed - Grabbing Python Module
+07:13  - Explaining Heartbleed -- XKCD ftw
+10:15  - Explaining and running the exploit
+13:40  - Exporting large chunks of memory by running in a loop
+14:10  - Finding an encrypted SSH Key on the server
+15:35  - Examining heartbleed output to discover SSH Key Password
+17:45  - SSH as low priv user returned
+21:55  - Finding a writable tmux socket to hijack session and find a root shell
+23:50  - Alternative Privesc, DirtyC0w
+
+
+HackTheBox - Nibbles
+https://www.youtube.com/watch?v=s_0GcRGv6Ds&list=PLidcsTyj9JXJfpkDrttTdk1MNT6CDwVZF&index=9&t=0
+
+00:18  - Start of Recon
+01:15  - Finding hidden directory via Source
+02:15  - Downloading NibbleBlog to help us with finding version information
+03:59  - Identifying what vresion of NibblesBlog is running
+04:42  - Using SearchSploit to find vulnerabilities
+05:36  - Examining the Exploit
+06:08  - Explanation of exploit
+07:25  - Attempting to find valid usernames for NibblesBlog
+09:13  - Finding usernames in /content/private
+10:15  - Using Hydra to attempt to bruteforce
+14:08  - Oh crap. Hydra not good idea we're blocked...
+15:40  - Using SSH Proxies to hit nibbles from another box (Falafel)
+18:20  - Guessing the password
+20:10  - Logged in, lets attempt our exploit!
+22:46  - Code Execution achieved.  Lets get a reverse shell
+24:53  - Reverse shell returned.
+26:00  - Running sudo -l examine sudoer, then finding out why sudo took forever to return
+26:50  - Privesc via bad sudo rules
+32:10  - Alternative PrivEsc via RationalLove
+
+
+HackTheBox - Sizzle
+https://www.youtube.com/watch?v=YVhlfUvsqYc&list=PLidcsTyj9JXJSn8KxSr_-9eKEwxJJtf_x&index=2&t=0
+
+01:04  - Begin of Recon
+06:45  - Checking the web interfaces
+07:20  - Discovering there is a Certificate Authority
+08:50  - Taking a look at LDAP
+10:55  - Examining SMB to find shares
+12:00  - Searching the Operations and Department Shares
+14:50  - Viewing permissions of a SMB Share with SMBCACLS
+19:10  - Discovering a writeable share, dropping a SCF File to get a hash
+22:04  - Using Hashcat to crack NetNTLMv2
+24:40  - Using SMBMap to identify if this user has access to anything extra
+25:40  - Discovering the CertSRV Directory
+28:00  - Discovering Powershell Remoting
+30:00  - Error from WinRM (Need SSL)
+31:00  - Using openSSL to generate a private key
+31:52  - Going to /CertSRV to sign our certificate as Amanda
+34:00  - Adding the SSL Authentication to WinrM
+35:15  - Playing with LDAP Again (with the Amanda Creds)
+37:50  - Shell on the box with WinRM as Amanda
+38:15  - Running SharpHound
+40:29  - Applocker is on the box, lets move it in the windows directory
+42:00  - Trying to get the bloodhound data off the box.
+44:20  - Starting bloodhound
+45:27  - File didn't copy lets load up Covenant
+49:30  - Covenant is up and running - Create a HTTP Listener
+50:30  - Hosting a Launcher
+52:30  - Getting a grunt
+54:40  - Running SeatBelt
+57:00  - Running SharpHound
+01:01:18  - Running Bloodhound with all Collection Methods
+01:05:15  - Discovering the MRLKY can DCSYNC
+01:07:25  - Cannot kerberoast because of the Double Hop Problem, create token with MakeToken
+01:12:30  - Cracked the Kerberoasted Hash, doing maketoken with mrlky and running DCSYnc
+01:14:40  - Running WMIExec to get Administrator
+01:22:00  - UNINTENDED Method 1: Amanda can write to Clean.bat
+01:24:30  - UNINTENDED Method 2: Forensic artifacts leave MRKLY Hash in C:\windows\system32\file.txt
+
+
+HackTheBox - Ethereal
+https://www.youtube.com/watch?v=Bhh5yPHjwUY&list=PLidcsTyj9JXJSn8KxSr_-9eKEwxJJtf_x&index=3&t=0
+
+00:50  - Begin of Recon, Downloading FTP and inspecting websites
+10:23  - Recap of what we saw on the recon. Limited pages that provide paths for exploitation, Server Hostname, and FTP
+11:30  - Sending MD5Hashes to VirusTotal to get file age
+15:45  - Downloading PasswordBox sourcecode to examine pbox.dat and discover a password manager.
+21:00  - Use Hydra to try to bruteforce ethereal.htb:8080, find blind command injection in page by running various ping commands but no way to view output.
+25:45  - Using nslookup to exfil the results of commands executed.
+33:15  - Creating Python Script to automate exploitaiton of this program.  Using Scapy, BeutifulSoup, and Requests.
+55:23  - Script working! Now to make the output a bit more pretty using tokens to sepereate spaces
+01:02:00  - Running commands to get interesting information about the page
+01:05:20  - Enumerating the Firewall via netsh
+01:09:10  - Using OpenSSL to get a reverse shell on windows
+01:17:25  - Reverse shell returned.
+01:19:40  - Creating a malicious shortcut via powershell
+01:22:40  - Using OpenSSL To transfer files
+01:28:00  - Getting reverse shell as Alan, then using OpenSSL to convert files to base64 to make exfil easier
+01:32:30  - Creating and signing a malicious MSI with WiX.
+01:48:15  - First attempt failed, creating a less complicated MSI File by just having it execute our shortcut
+01:53:00  - Getting reverse shell as SYSTEM - Cannot read EFS Files
+01:55:20  - Having our MSI not run as SYSTEM by changing impersonation in WiX
+01:58:30  - Shell as Rupal returned.
+
+
+HackTheBox - Fighter
+https://www.youtube.com/watch?v=CW4mI5BkP9E&list=PLidcsTyj9JXJSn8KxSr_-9eKEwxJJtf_x&index=4&t=0
+
+00:00:55  - Begin of Recon Nmap, Identify OS Version, Check out Page to find hostname is streetfighterclub.htb.
+00:02:53  - Using GoBuster and WFUZZ to identify: members.streetfighterclub.htb and members.streetfighterclub.htb/old/login.asp
+00:08:45  - Begin poking around the members.streetfighterclub.htb page - Find SQL Injection
+00:12:00  - Boolean injection to force the query to return "valid login".  Play with logins to find it always returns to "Service not available"
+00:14:25  - Testing Union Injections for easy exfil of data
+00:15:50  - Examining Stacked Queries to make running our own SQL Statements easy.  Then bunch of injections to run Xp_CMDShell and get output.
+00:19:30  - Some valuable recon/information in debugging our SQL queries. Noticing small things really helps.
+00:34:40  - Start of making a program to give us a command shell.
+01:09:40  - Explaining the program we just created.  Then fix a small bug.
+01:12:45  - Begin of popping the box the intended way.  Finding powershell is blocked but specifying the 32-bit version is not
+01:17:10  - Return of 32-bit PowerShell... Identifying we can append data to c:\users\decoder\clean.bat -- That's odd lets try to place a shell in it to see if it is being ran.
+01:32:40  - Found the issue! Powershell is encoding in UTF-16 which is confusing cmd prompt.  64-bit Shell as Decoder returned!
+01:35:30  - Exploiting Capcom Driver to gain root shell, this post is super helpful: <a class="yt-uix-sessionlink" data-sessionlink="itct=CEMQ6TgYACITCKLHprWBh-MCFQ9WFQodD_MKjyj4HUjR_5CDucSJtwk" data-target-new-window="True" data-url="/redirect?redir_token=O90zCq4G3zdsC7XdL3n1vxXUZ9l8MTU2MTYzMzgxMEAxNTYxNTQ3NDEw&amp;v=CW4mI5BkP9E&amp;q=http%3A%2F%2Fwww.fuzzysecurity.com%2Ftutorials%2F28.html&amp;event=video_description" href="/redirect?redir_token=O90zCq4G3zdsC7XdL3n1vxXUZ9l8MTU2MTYzMzgxMEAxNTYxNTQ3NDEw&amp;v=CW4mI5BkP9E&amp;q=http%3A%2F%2Fwww.fuzzysecurity.com%2Ftutorials%2F28.html&amp;event=video_description" rel="nofollow noopener" target="_blank">http://www.fuzzysecurity.com/tutorial...
+01:42:18  - Escalating to System via Capcom Exploit, then copying root.exe and checkdll.dll to our box so we can reverse it.
+01:47:25  - Looking at the binaries in Ida64 Free
+01:51:14  - Explaining what's happening and then writing a script to bypass the password check.
+01:55:35  - Start of unintended way (Juicy Potato)
+01:58:10  - Finding a world write-able spot under System32 for AppLocker Bypass, thanks @Bufferov3rride -- Then uploading JuicyPotato
+02:06:10  - Start of modifying JuicyPotato to accept uppercase arguments.
+02:10:14  - Finding a vulnerable CLSID to get JuicyPotato working
+02:28:25  - Running JuicyPotato with a vulnerable CLSID to gain a SYSTEM Shell, then create our own DLL to bypass the check.
+
+
+HackTheBox - Rabbit
+https://www.youtube.com/watch?v=5nnJq_IWJog&list=PLidcsTyj9JXJSn8KxSr_-9eKEwxJJtf_x&index=5&t=0
+
+01:40  - Begin of Recon (nmap, setting hostname, dns, nmap, ipv6)
+05:45  - Checking websites (80,443,8080)
+08:10  - Attempting to enumerate users of OWA-2010 (Fails)
+14:10  - Checking out Joomla Version (/administrator/manifets/files/joomla.xml)
+15:50  - Using SearchSploit with (Complain Management System)
+19:38  - Register Account, Login, Verify/Play with SQL Union Injection
+23:30  - Enumerating SQL Injection with SQLMap
+29:18  - Going back to MSF/OWA_LOGIN and testing credentials.
+32:15  - Logging into OWA and reading email to find out OpenOFfice, Defender, and Powershell Constain Mode is installed
+36:20  - Creating a malicious OpenOffice macro with LibreOffice + Downloading an Executing a file without Powershell (certutil ftw)
+40:18  - Compiling Merlin (like MSF/Empire)
+48:40  - Sending the email and waiting.
+50:20  - Merlin call back, Switch to Powershell Nishang to get a interactive shell
+54:30  - Running PowerUp to find we are an Administrator
+56:56  - Running JAWS to do some more Windows Enumeration
+01:03:04  - Found an odd scheduled task "System Maintenance"
+01:06:03  - Attempting to write a php shell to HTTPD
+01:12:30  - Frusterated creating a PHP Script... Switch to the SCHTask Privesc
+01:18:20  - Uhh. Testing if echo is somehow breaking .bat/.php files
+01:21:50  - Going back to test PHP to verify it just didn't like echo.
+
+
+HackTheBox - Minion
+https://www.youtube.com/watch?v=IbVmpr6IFQU&list=PLidcsTyj9JXJSn8KxSr_-9eKEwxJJtf_x&index=6&t=0
+
+00:40  - Begin of Recon
+04:00  - Start of GoBuster
+05:40  - Finding a SSRF
+09:00  - Passing arguments to cmd.aspx via SSRF
+12:05  - Firewall Enumeration
+16:35  - Begin of setting up ICMP Reverse Shell
+22:25  - Begin of sending ICMP Rev Shell to Server (Warning: Lots of Fail)
+46:31  - Return of ICMP Rev Shell
+52:20  - PrivEsc form IIS to Decoder
+01:11:15  - Unzipping via Powershell
+01:14:05  - Finding Administrator password hidden in NTFS File Stream
+01:16:30  - Using Net Use to mount C: As Administrator
+01:19:30  - Using IDA to analyze root.exe and grab the flag (Misses last character of hash)
+01:24:15  - Using Invoke Command to execute root.exe as admin (Lots of Fail)
+01:32:52  - Opening up the Firewall then just using RDP to gain access
+
+
+HackTheBox - Reel
+https://www.youtube.com/watch?v=ob9SgtFm6_g&list=PLidcsTyj9JXK2sdXaK5He4-Z8G0Ra-4u2&index=3&t=0
+
+00:42  - Begin of Nmap
+04:23  - Examining the anonymous FTP Directory and discovering email addresses in Meta Data
+06:50  - Manually enumerating valid email addresses via SMTP
+10:50  - Creating a "Canary Document" in Word to ping back to our server when a word document is opened
+13:14  - Generating a malicious RTF Document (CVE-2017-0199)
+26:28  - Shell Returned.  Enumerating the AppLocker Policy
+32:53  - Decrypting a PowerShell Secure String to reveal Tom's Password, Testing access with SSH
+35:22  - Lets forget we had Tom and run Bloodhound from Nico!
+40:30  - First time opening BloodHound on this box.
+49:45  - Lets update Bloodhound, looks like some data is missing and there were errors when running it
+53:25  - Finding a path from Nico to BACKUP_ADMINS and explaining AD Security Objects (GenericWrite, WriteOwner,etc)
+58:23  - Taking Ownership over Herman then allowing Nico to change his password and examining bloodhound
+01:01:40  - Adding Herman to the Backup_Admins group
+01:04:30  - Finding the Administrator Password within backup scripts.
+01:07:00  - Attempting to run Watson (ends up not working)
+01:23:22  - Using Metasploit to do the box
+01:25:42  - Since Watson failed, lets just look at last patch times on the box to get an idea whats vulnerable.
+01:27:19  - Attempting to do the ALPC Exploit within Metasploit
+01:31:00  - That failed - Lets just prove the box is vulnerable, by overwriting a DLL
+
+
+HackTheBox - DropZone
+https://www.youtube.com/watch?v=QzP5nUEhZeg&list=PLidcsTyj9JXK2sdXaK5He4-Z8G0Ra-4u2&index=4&t=0
+
+01:00  - Start of Recon
+02:15  - TFTP Enumeration - Identifying configuration and OS information
+06:32  - Finding a path to code execution
+07:17  - Examining PSExec Metasploit Module
+08:55  - Using irb within metasploit to print a powershell payload
+12:30  - Examining PsExec()
+15:40  - Examining native_upload
+18:10  - Examining mof_upload
+20:34  - Using irb within metasploit to print the MOF File
+22:35  - Quick explanation of MOF Files
+25:05  - Modifying the MOF to run NetCat
+27:30  - Uploading nc to the target
+28:50  - Uploading the malicious MOF File and getting a shell!
+29:50  - Using Streams to view Hidden text within ADS
+33:08  - Start of Bonus Content, finging a TFTP Exploit that uses MOF
+35:05  - Attempting to use distrinct_ftp_traversal against DropZone
+36:30  - Installing pry.byebug in order to allow us to drop to a debug console and step through metasploit modules
+40:50  - Testing out pry.byebug
+42:30  - Finding why the exploit module didn't work
+44:50  - Module still doesn't work, TFTP Stopping mid transfer
+49:30  - Whoops, changed the delay on the wrong timeout
+51:00  - Meterpreter Shell returned, showing off the extended API and some WMI Commands.
+
+
+HackTheBox - Mantis
+https://www.youtube.com/watch?v=VVZZgqIyD0Q&list=PLidcsTyj9JXK2sdXaK5He4-Z8G0Ra-4u2&index=6&t=0
+
+01:20  - Start of nmap
+03:22  - Poking at a rabbit hole (8080)
+08:08  - GoBuster to find hidden directory
+09:50  - Finding SQL Creds in hidden directory
+13:40  - Using dbeaver to enumerate database
+16:50  - Impacket-PSExec to Admin
+19:00  - Proving James is not an Admin
+20:35  - Using MSF to Enable Remote Desktop to do Incident Response
+27:00  - Start of Remote Desktop Looking at Event Log + Active Directory
+31:00  - Installing Sysmon to get better logs
+36:15  - Looking at Sysmon Logs
+42:20  - Proving the PrivEsc was due to Impacket-PSExec not cleaning up
+48:00  - Using Forensics to get Service Creation Date
+53:30  - Finding a HTB User creating a Git Issue to Impacket (LOL)
+55:10  - Intended Route - Forging a Kerberos Ticket MS14-068
+
+
+HackTheBox - Giddy
+https://www.youtube.com/watch?v=J2unwbMQvUo&list=PLidcsTyj9JXI9E9dT1jgXxvTOi7Pq_2c5&index=2&t=0
+
+01:00  - Begin of intro
+02:17  - Examining port 80 and 443
+03:15  - Using gobuster to discover directories
+04:20  - /remote discovered, nothing to do here
+05:25  - /mvc discovered
+06:15  - SQL Injection everywhere
+09:15  - Attempt to perform union injection on search
+10:15  - Having trouble, send to SQLMap look at other places in the applicaiton
+12:20  - SQLMap having trouble with search SQL, change to ITEM
+16:50  - Attempting XP_CMDSHELL (Fails)
+19:50  - Using XP_DIRTREE to read files off SMBShare
+23:30  - Use Responder to steal the authentication attempt of XP_DIRTREE
+25:00  - Cracking the NetNTLMv2 Hash
+26:00  - Logging into /remote with cracked credentials
+26:40  - Discovering unifi video is installed, this has a known privesc
+29:30  - Attempting to use Meterpreter. (Fail: AV)
+32:15  - Grabbing and compiling a DotNet Reverse Shell
+35:15  - Actually compiling the reverse shell
+38:58  - Using xcopy to copy our reverse shell to the victim
+39:00  - Attempting to find Unifi Service name so we can restart it. End up searching registry due to permission issues.
+42:10  - Restarting Unifi Service so it executes TaskKill.exe
+44:25  - Start of Bypassing AppLocker Bypass by copying executable into a directory under Windows
+45:50  - Escaping powershell constrained mode with PSBypassCLM
+
+
+HackTheBox - SecNotes
+https://www.youtube.com/watch?v=PJXb2pK8K84&list=PLidcsTyj9JXI9E9dT1jgXxvTOi7Pq_2c5&index=3&t=0
+
+01:05  - Begin of recon
+02:45  - Checking out the website
+03:50  - Using wfuzz to enumerate usernames
+05:45  - Logging in with an account we created
+07:23  - Checking out Change Password and noticing it does this poorly
+09:25  - Using the contact form, to see if tyler will follow links
+14:14  - Changing Tyler's password by sending him to the ChangePassword Page
+15:00  - Logged in and find SMB Share with credentials.
+16:15  - Found a webshare but not sure the directory it executes from. Begin hunting for a different webserver.
+17:48  - Port 8808 found via nmap'ing all ports.  Creating a php script to gain code execution
+19:15  - Downloading netcat for windows to use as a Reverse Shell
+21:14  - Playing with Bash on Windows
+22:35  - Finding the administrator password in ~/.bash_history
+23:45  - Alternate way to find the .bash_history file
+25:36  - Unintended way to bypass the CSRF. SQL Injection + bad Static Code analysis
+
+
+HackTheBox - Silo
+https://www.youtube.com/watch?v=2c7SzNo9uoA&list=PLidcsTyj9JXI9E9dT1jgXxvTOi7Pq_2c5&index=4&t=0
+
+01:30  - Begin of recon
+03:15  - Begin of installing SQLPlus and ODAT (Oracle Database Attack Tool)
+08:45  - Bruteforcing the SID with ODAT
+10:15  - Holy crap, this is slow lets also do it with Metasploit
+13:00  - Bruteforcing valid logins with ODAT
+16:00  - Credentials returned, logging into Oracle with SQLPlus as SysDBA
+19:00  - Reading files from disk via Oracle
+23:20  - Writing files to disk from Oracle.  Testing it in WebRoot Directory
+25:52  - File Written, lets write an ASPX WebShell to the Server
+29:10  - WebShell Working!  Lets get a Reverse Shell
+31:28  - Reverse Shell Returned
+32:24  - Finding a DropBox link, but password doesn't display well.
+33:55  - Attempting to copy file via SMB to view UTF8 Text
+35:18  - That didn't work, lets transfer the file by encoding it in Base64.
+36:55  - Got the password lets download the dump!
+39:10  - Begin of Volatility
+45:20  - Running the HashDump plugin from volatilty then PassTheHash with Administrator's NTLM!
+47:35  - Begin of unintended way, examining odat and uploading an meterpreter exe
+50:30  - Using odat externaltable to execute meterpreter and get a system shell!
+52:20  - Examining odat verbosity flag to see what commands it runs and try to learn.
+
+
+HackTheBox - Chatterbox
+https://www.youtube.com/watch?v=_dRrvJNdP-s&list=PLidcsTyj9JXI9E9dT1jgXxvTOi7Pq_2c5&index=6&t=0
+
+01:18  - Begin of Recon
+04:55  - Start of aChat buffer Overflow: Finding the exploit script with Searchsploit
+07:24  - Begin of replacing POC's Calc Shellcode with what is generated from MSFVenom
+09:42  - Correction: Payload Size wrong, should be 3,xxx -- look at "Payload Size" I accidentally highlighted the size of the python file.
+14:30  - Whoops, erased too much out of POC.  Lets correctly replace the shellcode this time and get a shell.
+17:50  - Running PowerUp to find AutoLogon Credentials
+20:05  - Running Code as Administrator
+24:18  - First Privesc Method: Using Start-Process to execute commands as a different user because Invoke-Command did not work.
+27:30  - Alternate way to read root.txt -- Alfred owns root.txt, so he can edit the files access list. Get-ACL to view access list and cacls to modify
+33:12  - Summary of the box
+34:37  - Doing the box with Metasaploit, Warning: Lots of fails.
+43:10  - Using meterpreters PortFwd to bypass ChatterBox's firewall and access port 445
+51:25  - Doing the box with Empire !
+58:20  - Using Empire's Run_As module to execute commands as Administrator
+
+
+HackTheBox - Arctic
+https://www.youtube.com/watch?v=e9lVyFH7-4o&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn&index=12&t=0
+
+00:00  - Intro
+00:12  - Enumerate with nmap
+00:40  - Going to the webpage
+01:50  - Using SearchSploit to find ColdFusion Exploits
+02:40  - Attempt to exploit through MSF. Debug why it failed.
+03:50  - Setting up a Burp Redirect listener
+04:55  - Examining request send by MSF Exploit
+06:35  - Getting a reverse shell
+07:50  - Using Unicorn to create a Powershell Meterpreter Loa
+11:35  - Reverseshell returned
+12:10  - Using the MSF post module local_exploit_suggestor
+15:29  - Privesc via MS10-092
+
+
+HackTheBox - Access
+https://www.youtube.com/watch?v=Rr6Oxrj2IjU&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn&index=2&t=0
+
+00:58  - Begin of recon: ftp, telnet, IIS 7.5
+03:00  - Downloading all files off an FTP Server with WGET
+05:30  - Examining the "Access Control.zip" file.
+06:30  - Cracking a zip file with John
+07:45  - Creating a wordlist for cracking the zip (strings of the mdb file)
+10:00  - Exploring the MDB Files (Access Database) with MDBTools (mdb-sql and mdb-tables)
+12:30  - Grabbing the same password we cracked by checking the auth_user table
+13:35  - Converting the PST File (Outlook Email) to PlainText via readpst
+15:00  - Logging into telnet with the credentials from the email
+15:45  - Switching to a Nishang Shell to execute powershell
+18:15  - Running JAWS (Just Another Windows Scanner)
+23:34  - Discovering Stored Credentials on the box for ACCESS\Administrator
+25:11  - Examining the Shortcut on PUBLIC\DESKTOP which shows us how the "Stored Credential" is used.
+25:58  - Using powershell to view information of a Shortcut
+27:25  - Using the Stored Credential via runas /savecred
+30:31  - Creating Base64 (UTF-16LE) on linux to use in as a Powershell EncodedCommand
+31:54  - Box done, Administrator returned.
+32:38  - Begin of decrypting the Stored Credential, uploading Mimikatz
+33:40  - Using powershell to download files
+36:36  - Discovering that I was trying to save mimikatz to a directory i cannot write to :(
+37:15  - Testing Applocker methods to bypass the Software Restriction Policy (Give up on this one)
+38:50  - Trying to get Meterpreter shell via Unicorn (Fails, unknown reason)
+41:28  - Getting a Empire Agent running
+43:35  - Empire Agent Returned, Injecting meterpreter shellcode.
+45:46  - Attempting to use Mimikatz from within Meterpreter to decrypt dpapi::creds
+46:52  - Explaining Mimikatz Arguments when in "non-interactive" mode
+54:20  - Grabbing needed files to decrypt DPAPI::CREDS offline
+56:09  - Switing to Windows to run Mimikatz
+01:02:32  - Decrypting the Creds stored in DPAPI
+
+
+HackTheBox - Pivoting Update: Granny and Grandpa
+https://www.youtube.com/watch?v=HQkDL-xh7es&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn&index=8&t=0
+
+
+
+
+HackTheBox - Granny and Grandpa
+https://www.youtube.com/watch?v=ZfPVGJGkORQ&list=PLidcsTyj9JXL4Jv6u9qi8TcUgsNoKKHNn&index=9&t=0
+
+1:50  - Nmap Results (Discovery of WebDav)
+4:35  - DavTest
+6:22  - HTTP PUT Upload Files
+7:00  - MSFVenom Generate aspx payload
+13:00  - User Shell Returned
+16:23  - Get Admin Shell (ms14-070)
+17:14  - Beginning of Pivot Fail.  Socks Proxy
+29:35  - Shell on Grandpa (CVE-2017-7269)
+32:45  - Using portfwd to access ports not exposed to routable interfaces
+34:45  - Cracking LM Hash Explanation
+38:30  - Cracking LM Hashes via Hashcat
+41:30  - Grandpa acts cranky.  Revert.
+42:30  - Expected behavior when exploiting via CVE-2017-7269.  None of that auto system weirdness
+45:50  - Using Hashcat to crack NTLM using LM Hashes
+48:50  - Finally log into SMB using the portfwd
+49:07  - Random pivot attempt failure.
+
+
+HackTheBox - Blue
+https://www.youtube.com/watch?v=YRsfX6DW10E&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=15&t=0
+
+00:38  - Start of Recon
+01:20  - Finding NMAP Scripts (Probably a stupid way)
+02:00  - Running Safe Scripts - Not -sC, which is default.
+02:52  - Listing NMAP Script Categories (Prob a really stupid way)
+03:18  - Really Cool Grep (Only show matching -oP)
+04:40  - Nmap Safe Script Output
+06:30  - Exploiting MS17-010 with MSF
+07:40  - Setting up Dev Branch of Empire
+09:07  - Starting a Listener
+10:55  - Getting a PowerShell Oneliner to launch payload
+12:16  - Invoke-Expression (IEX) to Execute Launcher
+13:25  - Interacting with a single agent
+13:40  - Using Modules - PowerUp Invoke-AllChecks
+14:40  - Fixing weird issue with PS Module
+16:15  - Invoke-AllChecks finished
+17:15  - Loading PS Modules into Memory
+17:40  - Executing funcitons out of above module
+18:20  - Why I don't pass to MSF via InjectShellcode
+22:45  - How I pass from Empire to MSF (Unicorn + IEX)
+25:53  - Just running Powershell CMDs from Empire (Shell)
+
+
+HackTheBox - Devel
+https://www.youtube.com/watch?v=2LNyAbroZUk&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=16&t=0
+
+01:02  - Going over NMAP
+02:00  - Anonymous FTP + File Upload
+04:30  - MSFVenom
+07:20  - Metasploit
+10:00  - Exploit Suggestor
+11:30  - Getting Root
+
+
+HackTheBox - Optimum
+https://www.youtube.com/watch?v=kWTnVBIpNsE&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=17&t=0
+
+1:38  - Go to HTTPFileServer
+2:56  - Explanation of Vulnerability
+4:49  - Testing the Exploit
+6:25  - Getting rev tcp shell with Nishang
+11:54  - Shell returned
+13:15  - Finding exploits with Sherlock
+15:15  - Using Empire Module without Empire for Privesc
+21:00  - Start of doing the box with Metasploit
+22:36  - Reverse Shell Returned (x32)
+24:45  - MSF Error during PrivEsc
+25:35  - Reverse Shell Returned (x64)
+26:19  - Same PrivEsc as earlier, different result
+28:47  - Examining how Rejetto MSF Module works with Burp
+
+
+HackTheBox - Bastard
+https://www.youtube.com/watch?v=lP-E5vmZNC0&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=18&t=0
+
+
+
+
+HackTheBox - Bashed
+https://www.youtube.com/watch?v=2DqdPcbYcy8&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=2&t=0
+
+
+
+
+HackTheBox - Bounty
+https://www.youtube.com/watch?v=7ur4om1K98Y&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=20&t=0
+
+00:38  - Begin of recon
+01:48  - Gobuster, using -x aspx to find aspx pages
+03:16  - Playing with a file upload form, seeing what can be uploaded
+05:15  - Using Burp Intruder to automate checking file extensions
+07:00  - Finding a way to execute code from file upload in ASPX (web.config)
+10:55  - Executing code via web.config file upload
+13:08  - Installing Merlin to be our C2
+15:25  - Compiling the Merlin Windows Agent
+18:37  - Modifying web.config to upload and execute merlin
+21:14  - Merlin Shell returned!
+24:18  - Checking for SEImpersonatePrivilege Token then doing Juicy Potato
+27:44  - Getting Admin via Juicy Potato
+29:44  - Box completed
+30:00  - Start of doing this box again, with Metasploit! Creating a payload with Unicorn
+33:00  - Having troubles getting the server call back to us, trying Ping to see if the exploit is still working
+34:17  - Reverted box.  Have to update our payload with some updated VIEWSTATE parameters
+36:45  - Metasploit Session Returned!  Checking local_exploit_suggester
+40:01  - Comparing local_exploit_suggester on x32 and x64 meterpreter sessions
+40:30  - Getting Admin via MS10-092
+42:05  - Attempting to pivot through the Firewall using Meterpreter and doing Eternal Blue! (Fails, think I screwed up listening host <a class="yt-uix-sessionlink" data-sessionlink="itct=CFYQ6TgYACITCIGiwcGBh-MCFcZkFQodIygPqyj4HQ" data-url="/results?search_query=%23PivotProblems" href="/results?search_query=%23PivotProblems">#PivotProblems
+47:20  - Creating a Python Script to find valid extensions that handles CSRF Checks if they had existed
+
+
+HackTheBox - Jerry
+https://www.youtube.com/watch?v=PJeBIey8gc4&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=21&t=0
+
+00:45  - Introduction, nmap
+01:30  - Clicking around in Tomcat
+02:20  - Playing around with HTTP Authentication
+05:45  - Bruteforcing tomcat default creds with Hydra and seclists
+08:20  - Sending hydra through a proxy to examine what is happening
+12:50  - Logging into tomcat and using msfvenom + metasploit to upload a malicious war file
+22:42  - Begin of doing this box without MSF
+23:45  - Downloading a cmd jsp shell and making a malicious war file
+26:25  - WebShell returned
+28:00  - Begin of installing SilentTrinity
+30:55  - SilentyTrinity Started, starting listener and generating a payload
+33:00  - Pasting the payload into the webshell
+34:00  - Debugging SSL Handshake errors
+37:00  - Starting SilentTrinity back up, how to use modules
+39:10  - Start of Execute-Assembly, compiling Watson
+43:10  - Running Watson
+43:30  - Start of Seatbelt and debugging why some dotNet code may not run (versioning issues)
+
+
+HackTheBox - Jeeves
+https://www.youtube.com/watch?v=EKGBskG8APc&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=22&t=0
+
+01:19  - Begin of Enumeration
+04:15  - Avoiding the Rabbit Hole on port 80 (IIS)
+06:00  - Begin of Jenkins
+09:00  - Using Jenkins Script Console (Groovy) to gain code execution
+12:00  - Reverse TCP Shell via Nishang
+17:00  - Reverse Shell returned.  PowerSplit dev branch to find unintended privesc (Tokens)
+22:20  - Powersploit's Invoke-AllChecks completes
+24:20  - Finding Keepass Database using Impack-SMBServer to transfer files
+27:00  - Cracking the KeePass Database
+30:20  - Using KeePass2 to open database
+34:25  - PassTheHash via pth-winexe to gain administrator shell
+35:20  - Grabbing root.txt that is hidden via Alternate Data Streams (ADS)
+39:00  - Using RottenPotato to escalate to root via MSF
+41:00  - Using Unicorn to gain a reverse MSF SHell
+45:20  - Performing the attack
+48:00  - Impersonating Token to gain root
+
+
+HackTheBox - Bart
+https://www.youtube.com/watch?v=Cz6vQvGGiuc&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=23&t=0
+
+01:54  - Begin Recon, Windows IIS/OS Mapping and GoBuster
+05:20  - Explanation of Virtual Host Routing
+09:50  - Developers name exposed in HTML Source, also discover /monitor
+11:10  - Enumerating Username in PHP Server Monitor: Challenge Watch Sense to und
+16:33  - Discover of Internal-01.bart.htb
+19:17  - Harveys Password with Hydra (Note: This is bypassable if you DIRBUST to find /Log/log.php)
+29:34  - Finally got Hydra to return the password!
+32:20  - Log Poisoning + LFI = Remote Code Execution
+37:30  - Return of Reverse Shell
+41:30  - Why you should check if you're a 32-bit process on a 64-bit machine
+48:35  - Attempting to use b33f/FuzzySecurity Invoke-RunAs
+56:00  - Mistake with Invoke-RunAs is probably pointing it to the wrong port. D:
+01:03:40  - ARGH!  Lets try to use this account via Empire
+01:11:00  - Bring out the big guns, it's Metasploit Time!
+01:18:10  - Alright, lets poke a hole in the firewall and connect over SMB!
+01:21:17  - Failed to PSExec in MSF
+01:21:40  - Found Impacket-PSExec!  And it works!
+01:23:45  - Lets go hunt for creds!
+01:35:23  - Cracking Salted Hashes with Hashcat (Sha265.Salt)
+
+
+HackTheBox - Tally
+https://www.youtube.com/watch?v=l-wzBhc9wFc&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=24&t=0
+
+01:45  - Start of NMAP
+04:17  - Begin of Sharepoint/GoBuster (Special Sharepoint List)
+06:32  - Manually browsing to Sitecontent (Get FTP Creds)
+10:18  - Mirror FTP + Pillage for information, Find keypass in Tim's directory and crack it.
+18:22  - Mounting/Mirroring ACCT Share with found Creds and finding hardcoded SQL Creds
+25:24  - Logging into MSSQL with SQSH, enabling xp_cmdshell and getting a Nishang Rev Shell
+34:35  - Finding SPBestWarmUp.ps1 Scheduled Task that runs as Administrator
+40:00  - Begin of RottenPotato without MSF (Decoder's Lonely Potato)
+45:56  - Using Ebowla Encoding for AV Evasion to create an exe for use with Lonely Potato
+58:00  - Lonely Potato Running to return a Admin Shell
+01:04:22  - Finding CVE-2017-0213
+01:08:33  - Installing Visual Studio 2015 &amp;&amp; Compiling the exploit
+01:15:50  - Exploit Compiled, trying to get it to work....
+01:18:11  - Just noticed the SPBestWarmUp.ps1 executed and gave us a shell!
+01:28:37  - Found the issue, exploit seems to require interactive process
+01:30:00  - Begin of Firefox Exploit Cluster (Not recommended to watch lol).  It's a second unreliable way to get user
+
+
+HackTheBox - Active
+https://www.youtube.com/watch?v=jUc1J31DNdw&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=25&t=0
+
+01:10  - Begin of recon
+03:00  - Poking at DNS - Nothing really important.
+04:00  - Examining what NMAP Scripts are ran.
+06:35  - Lets just try out smbclient to list shares available
+07:25  - Using SMBMap to show the same thing, a great recon tool!
+08:30  - Pillaging the Replication Share with SMBMap
+09:20  - Discovering Groups.xml and then decrypting passwords from it
+13:10  - Dumping Active Directory users from linux with Impacket GetADUsers
+16:28  - Using SMBMap with our user credentials to look for more shares
+18:25  - Switching to Windows to run BloodHound against the domain
+26:00  - Analyzing BloodHound Output to discover Kerberostable user
+27:25  - Performing Kerberoast attack from linux with Impacket GetUsersSPNs
+29:00  - Cracking tgs 23 with Hashcat
+30:00  - Getting root on the box via PSEXEC
+
+
+HackTheBox - Jail
+https://www.youtube.com/watch?v=80-73OYcrrk&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=26&t=0
+
+00:52  - Recon - NMAP
+04:05  - Recon - Getting Linux Distro
+04:35  - Recon - GoBuster
+05:40  - Analyzing Jail.c source
+09:45  - Begin Binary Exploitation
+15:10  - Verify Buffer Overflow
+17:35  - Create Exploit Skeleton
+20:50  - Finding EIP Overwrite
+23:02  - Adding Reverse TCP Shellcode
+30:15  - Switching to "Socket Re-Use" Shellcode
+32:20  - Shell Returned
+34:00  - NFSv3 Privesc Begin
+40:15  - Begin incorrectly playing with SetUID
+43:10  - SELinux Escape
+45:25  - Using SELinux Escape to copy SSH Key
+48:55  - Logging in as Frank
+50:00  - Privesc to adm (sudo rvim)
+51:44  - Begin of finding a way to root
+55:58  - Begin cracking rar file
+57:18  - Using Hashcat to generate custom wordlist
+
+
+HackTheBox - Conceal
+https://www.youtube.com/watch?v=1ae64CdwLHE&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=30&t=0
+
+01:15  - Begin of recon
+02:54  - Checking SNMP with snmpwalk
+03:29  - Discovering a Hashed PSK (MD5) in SNMPWalk, searching the internet for a decrypted value
+04:18  - Getting more SNMP Information with snmp-check
+07:35  - Going over UDP Ports discovered by snmp-check
+10:55  - Running ike-scan
+11:55  - Examining ike-scan results to build a IPSEC Config
+13:50  - Installing Strongswan (IPSEC/VPN Program)
+14:19  - Adding the PSK Found earlier to /etc/ipsec.secrets
+15:30  - Begin configuring /etc/ipsec.conf
+20:08  - Starting and debugging ipsec
+21:55  - Explaining why we add TCP to strongswan config
+24:00  - Starting IPSEC, then using NMAP through IPSEC.
+25:55  - Enumerating SMB Quickly (SMBMap/cme)
+26:50  - Enumerating FTP, discovering we can upload files
+27:20  - Checking HTTP, hunting for our uploaded file.  Then uploading files that may lead to code execution
+29:44  - Grabbing an ASP Webshell from Github/tennc/webshell
+32:08  - Webshell has been uploaded
+32:30  - Explaining a weird MTU Issue you *may* run into due to the nested VPN's
+35:40  - Back to playing with the web shell, getting a reverse shell with Nishang
+38:03  - Explaining RLWRAP
+38:40  - whoami /all shows SEImpersonation, so we run JuicyPotato to privesc
+44:35  - JuicyPotato fails with the default CLSID, changing it up to get it working.
+46:30  - Doing the box again with Windows
+47:15  - Setting up the IPSEC Connection through Windows Firewall
+50:00  - Installing a DotNet C2 (The Covenant)
+54:20  - Covenant/Elite open, starting a Listener then a Powershell Launcher
+01:00:10  - Grunt activated. Running Seatbelt, then compiling Watson and reflectively running it
+01:05:00  - Grabbing the Sandbox Escaper ALPC Privesc
+01:08:03  - Being lazy and compiling a CPP Rev Shell in Linux because it wasn't installed on Windows
+01:25:35  - Box is reverted, trying the ALPC Exploit again
+
+
+HackTheBox - Brainfuck
+https://www.youtube.com/watch?v=o5x1yg3JnYI&list=PLidcsTyj9JXK-fnabFLVEvHinQ14Jy5tf&index=9&t=0
+
+0:20  - Recon
+3:40  - Start of WP Hacking
+10:30  - Logged into WP
+15:00  - Login to SuperSecretForum
+25:00  - Cracking the SSH Key
+27:15  - Begin of getting root.txt (RSA Cracking)
