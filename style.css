@@ -4,3 +4,6 @@
 ul {
   list-style-type: none;
 }
+#timestamps{
+  padding: 0;
+}
